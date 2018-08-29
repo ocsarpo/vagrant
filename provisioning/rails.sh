@@ -31,7 +31,7 @@ echo "2.5.1 설치"
   rbenv global 2.5.1
   ruby -v
 fi
-cd /vagrant
+
 if [ ! -e /home/vagrant/.rbenv/shims/bundle ]; then
   gem install bundler
   rbenv rehash
