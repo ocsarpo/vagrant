@@ -14,9 +14,10 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/bionic64"
   config.ssh.forward_agent = true
-  
+
   # https://gist.github.com/creisor/e20f254a89070f46b91cc3e0c5cd18db
-  config.vm.provision "shell", path: "./provisioning/rails.sh", privileged: false, args: ""  
+  # config.vm.provision "shell", path: "./provisioning/rails.sh", privileged: false, args: ""
+  # config.vm.provision "shell", path: "./provisioning/mariadb.sh", privileged: false, args: ""  
   config.vm.network "forwarded_port", guest: 3123, host: 61234, auto_correct: true
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 
